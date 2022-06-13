@@ -12,7 +12,7 @@ NEGATIVO [-]{DIGITO}
 DECIMAL ({POSITIVO}|{NEGATIVO})[.]{DIGITO}
 PALAVRA [a-zA-Z]+
 TELEFONE {DIGITO}{4}[-]{DIGITO}{4}
-PLACA  [A-Z]{3}(-){DIGITO}{4}
+PLACA  [A-Z]{3}[-]{DIGITO}{4}
 NOME {PALAVRA}[ ]{PALAVRA}[ ]{PALAVRA}|{PALAVRA}[ ]{PALAVRA}[ ]{PALAVRA}[ ]{PALAVRA}
 delim [ \t\n]
 ws {delim}+
@@ -26,6 +26,7 @@ ws {delim}+
 {TELEFONE}     {printf("Foi encontrado um telefone. LEXEMA: %s\n", yytext);}
 {DECIMAL}      {printf("Foi encontrado um numero decimal. LEXEMA: %s\n", yytext);}
 {NOME}         {printf("Foi encontrado um nome. LEXEMA: %s\n", yytext);}
+{PLACA}        {printf("Foi encontrado uma placa. LEXEMA: %s\n", yytext);}
 {ws}           {/*nenhuma acao e nenhuma retortno*/}
 
 

@@ -1,0 +1,4 @@
+4+4 55-55 @Daniel arquivo.c 53:40 12:50
+@gabriel 8-5 @Miranda lk.c 99:35 -999 45-66
+58:44 @vitor fonseca lex.c -58+333 gabriel 
+
